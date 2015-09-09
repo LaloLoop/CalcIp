@@ -1,0 +1,23 @@
+Para debug en calcip.cpp:
+//            qDebug() << "::N_hosts:" << n_hosts;
+//            qDebug() << "::Calc_host_bits: " << n_host_bits;
+//            qDebug() << "::Host_bits_from_ip:" << n_host_bits_from_ip
+//                     << "\n::Subnet_bits:" << (n_host_bits_from_ip-n_host_bits)
+//                     << "\n::Prefix_bits_from_ip:" << ip->get_prefix_bits()
+//                     << "\n::N_Subnets:" << n_subnets;
+//            qDebug() << "::Nmask:" << nmask_final->toString();
+//            qDebug() << "::Prefix: " << 32-(n_host_bits_from_ip-n_host_bits);
+
+Expresión regular para verificar IPs:
+//QString Octet = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])";
+//Expresión regular para validar IP.
+//    QString A = "[0-9]";
+//    QString B = "[1-9][0-9]";
+//    QString C = "(1[0-9]{2}|2([0-4][0-9]|5[0-5]))";
+//    QString Octet = "(" + A + "|" +  B  + "|" + C + ")";
+//    QRegExp ipRegExp("^\\b" + Octet + "\\." + Octet + "\\." + Octet + "\\." + Octet + "\\b$");
+
+//    QRegExpValidator *ipValidator = new QRegExpValidator(ipRegExp,0);
+
+Input Mask:
+//    ui->ipLineEdit->setInputMask("000.000.000.000");
